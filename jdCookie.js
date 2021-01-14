@@ -1,3 +1,6 @@
+/*
+此文件为Node.js专用。其他用户请忽略
+ */
 //此处填写京东账号cookie。
 //注：github action用户cookie填写到Settings-Secrets里面，新增JD_COOKIE，多个账号的cookie使用`&`隔开或者换行
 let CookieJDs = [
@@ -22,3 +25,4 @@ console.log(`==================脚本执行- 北京时间(UTC+8)：${new Date(ne
 for (let i = 0; i < CookieJDs.length; i++) {
   const index = (i + 1 === 1) ? '' : (i + 1);
   exports['CookieJD' + index] = CookieJDs[i].trim();
+}
